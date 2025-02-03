@@ -2,8 +2,10 @@ package com.webservice.Shop.services;
 
 import com.webservice.Shop.entities.User;
 import com.webservice.Shop.repositories.UserRepository;
+import com.webservice.Shop.services.exceptions.DataBaseException;
 import com.webservice.Shop.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -36,8 +38,8 @@ public class UserService {
             repository.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
             throw new ResourceNotFoundException(id);
-        } catch (RuntimeException e) {
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Erro ao deletar o recurso", e);
+        } catch (DataIntegrityViolationException e) {
+            throw new DataBaseException(e.getMessage());
         }
     }
 

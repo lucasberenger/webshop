@@ -50,6 +50,7 @@ docker-compose up -d
 
 O comando acima irá criar dois containers: um para o MySQL e outro para a API. Ela estará disponível em http://localhost:8080.
 A partir de agora, você pode testar os endpoints utilizando o Postman ou Insomnia.
+
 ---
 ### 📌 Endpoints Principais
 - GET /products → Lista todos os produtos

@@ -16,6 +16,7 @@ Para executar o projeto, é necessário ter instalado os seguintes programas:
 - Java 17
 - Docker
 - Docker Compose
+- Postman ou Insomnia (para testar os endpoints)
 
 ### Clone o repositório
 Abra o terminal e execute os seguintes comandos:
@@ -48,13 +49,15 @@ docker-compose up -d
 ```
 
 O comando acima irá criar dois containers: um para o MySQL e outro para a API. Ela estará disponível em http://localhost:8080.
-
+A partir de agora, você pode testar os endpoints utilizando o Postman ou Insomnia.
 ---
 ### 📌 Endpoints Principais
 - GET /products → Lista todos os produtos
 - GET /categories → Lista todas as categorias
 - GET /users → Lista todos os usuários
 - GET /orders → Lista todos os pedidos
-
+- POST /users → Cria um novo usuário
+- PUT /users/{id} → Atualiza um usuário
+- DELETE /users/{id} → Deleta um usuário
 --- 
 

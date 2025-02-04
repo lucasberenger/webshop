@@ -1,4 +1,4 @@
-# 🛍️ Shop Web Service
+# 🛍️ WebShop API
 Este é um projeto de Web Service para gerenciamento de uma loja online. Ele permite o cadastro de produtos, categorias, usuários e pedidos, utilizando tecnologias modernas para garantir um backend eficiente e escalável.
 
 ---
